@@ -1,0 +1,7 @@
+.vscode
+db.sqlite3
+*.pyc
+*.csv
+__pycache__
+logs
+secrets.json
