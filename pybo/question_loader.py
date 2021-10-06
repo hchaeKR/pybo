@@ -22,8 +22,7 @@ author_id = 1
 '''
 Data Generator 특성으로 인해
 author_id 치환 필요 (범위에서 생성)
-미래 일시는 현재 (또는 과서 일시)로 변환
-
+미래 일시는 현재 (또는 과거 일시)로 변환
 '''
 with open(CSV_PATH, newline='') as csvfile:
     data_reader = csv.DictReader(csvfile)
@@ -51,11 +50,9 @@ with open(CSV_PATH, newline='') as csvfile:
             author_id=author_id
             )
         question_list.append(q)
-#  print('생성된 question list는 총', len(question_list), '건')
+
 total = len(question_list)
-
 result = Question.objects.bulk_create(question_list)
-#  print('bulk create 건수는 총', len(result), '건')
-success = len(result)
 
+success = len(result)
 print(f'전체 { total }건 중 성공 { success }건, 실패 { total - success }')

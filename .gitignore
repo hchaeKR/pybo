@@ -6,3 +6,5 @@ db.sqlite3
 __pycache__
 logs
 secrets.json
+gendata.py
+question_loader.py
