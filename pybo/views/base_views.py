@@ -1,4 +1,5 @@
 from django.core.paginator import Paginator
+from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
 from django.db.models import Q, Count
 
@@ -52,3 +53,10 @@ def detail(request, question_id):
     # context = {'question': question, 'page': page}
     context = {'question': question}
     return render(request, 'pybo/question_detail.html', context)
+
+def files(request):
+    '''
+    url 리스트 출력
+    '''
+    urls = 'hello'
+    return HttpResponse(urls)
