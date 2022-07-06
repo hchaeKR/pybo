@@ -33,4 +33,5 @@ class Comment(models.Model):
     last_upd = models.DateTimeField()
 
     def __str__(self):
-        return self.objects.order_by('-last_upd')
+        # return self.objects.order_by('-last_upd')
+        return self.content

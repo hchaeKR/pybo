@@ -20,7 +20,7 @@
                 </div>
         </div>
     </div>
-    <table class="table table-sm">
+    <table class="table table-sm table-borderless table-hover table-striped">
         <thead>
             <tr class="text-center thead-dark">
                 <!--
@@ -126,7 +126,7 @@
         {% endif %}
     </ul>
     <!-- 페이징처리 끝 -->
-    <a href="{% url 'pybo:question_create' %}" class="btn btn-primary">질문 등록하기</a>
+    <a href="{% url 'pybo:question_create' %}" class="btn btn-info">질문 등록하기</a>
 </div>
 <form id="searchForm" method="GET" action="{% url 'index' %}">
     <input type="hidden" id="kw" name="kw" value="{{ kw|default_if_none:'' }}">
